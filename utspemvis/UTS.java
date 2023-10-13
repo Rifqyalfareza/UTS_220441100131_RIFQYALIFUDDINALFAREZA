@@ -127,14 +127,10 @@ public class UTS extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        int maxrandom=3;
-        Random r=new Random();
-        int kata=0;
         String komputer = null;
         String anda = null;
         String hasil = null;
 
-        kata=r.nextInt(maxrandom);
         
         int pilih = Integer.parseInt(pilihan.getText());
         if (pilih == 1){
@@ -161,19 +157,26 @@ public class UTS extends javax.swing.JFrame {
             System.out.println("Maaf, Silahkan Ulangi lagi");
         else if(anda.equals(komputer)){
             hasil = "SERI";
-            JOptionPane.showMessageDialog(null, "seri");
+            JOptionPane.showMessageDialog(null, "\nAnda = " + anda +"\nkomputer = " + komputer + "\nSeri");
         } else if(anda=="BATU" && komputer=="KERTAS"){
             hasil = "Anda Kalah";
-            JOptionPane.showMessageDialog(null, "kalah");
+                        JOptionPane.showMessageDialog(null, "\nAnda = " + anda +"\nkomputer = " + komputer + "\n Kalah");
+
         } else if(anda=="BATU" && komputer=="GUNTING"){
             hasil = "Anda Kalah";
-            JOptionPane.showMessageDialog(null, "kalah");
+                                    JOptionPane.showMessageDialog(null, "\nAnda = " + anda +"\nkomputer = " + komputer + "\n Kalah");
         } else if(anda=="KERTAS" && komputer=="GUNTING"){
             hasil = "Anda Kalah";
+                                                JOptionPane.showMessageDialog(null, "\nAnda = " + anda +"\nkomputer = " + komputer + "\n Kalah");
+
         } else if(anda=="GUNTING" && komputer=="KERTAS"){
             hasil = "Anda Menang";
+                                                JOptionPane.showMessageDialog(null, "\nAnda = " + anda +"\nkomputer = " + komputer + "\n Menang");
+
         } else if(anda=="GUNTING" && komputer=="BATU"){
             hasil = "Anda Kalah";
+                                                JOptionPane.showMessageDialog(null, "\nAnda = " + anda +"\nkomputer = " + komputer + "\n Kalah");
+
         }
 
         
